@@ -1,5 +1,5 @@
-# Project JampStart
-**"Project JampStart" site development**
+# Project JumpStart
+**"Project JumpStart" site development**
 
 [PRD (Product Requirements Document)](https://github.com/VikTorNik/Project_Booster/tree/main/PRD%20(Product%20Requirements%20Document))
 
