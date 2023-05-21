@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+:root {
+  --widthStandart: 1440px;
+  --heightStandart: 800px;
+
+  --left-bg-one-jump: 90.76px;
+  --top-bg-one-jump: 574.59px;
+  --left-bg-one-black: 0px;
+  --top-bg-one-black: 51.58px;
+  --left-bg-one-batt: 161px;
+  --top-bg-one-batt: 32px;
+
+  --bg-one-jump: 602px;
+  --bg-one-black: 215px;
+  --bg-one-batt: 1122px;
+  --bg-one-ellipse: 950px;
+
+  --left-bg-two-start: 33.4px;
+  --top-bg-two-start: 572.21px;
+  --right-bg-two-red: 39px;
+  --top-bg-two-red: 49px;
+  --right-bg-two-batt: 161px;
+  --top-bg-two-batt: 32px;
+
+  --bg-two-start: 593px;
+  --bg-two-red: 181px;
+  --bg-two-batt: 1122px;
+  --bg-two-photo: 720px;
+
+  --intro-width: 530px;
+  --intro-height: 379px;
+  --intro-left: 141px;
+  --intro-top: 226px;
+  --intro-font-size: 21px;
+  --intro-line-height: 25px;
+  --intro-text-indent: 35px;
+  --intro-text-shadow: 3px;
+  --intro-margin: 12.5px;
+}
+
+body {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: rgb(127, 123, 102);
+}
+
+.backgrount-layout-one {
+  width: calc(var(--widthStandart) * var(--ratioSizeWin));
+  height: calc(var(--heightStandart) * var(--ratioSizeWin));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(185, 179, 146, 1);
+}
+
+.left-bg-one {
+  background: url(/SVG/Jump.svg), url(/SVG/Jump_Black.svg), url(/SVG/Battary.svg), url(/SVG/Ellipse.svg) rgba(217, 217, 217, 0.21);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position:
+    left calc(var(--left-bg-one-jump) * var(--ratioSizeWin)) top calc(var(--top-bg-one-jump) * var(--ratioSizeWin)),
+    left calc(var(--left-bg-one-black) * var(--ratioSizeWin)) top calc(var(--top-bg-one-black) * var(--ratioSizeWin)),
+    left calc(var(--left-bg-one-batt) * var(--ratioSizeWin)) top calc(var(--top-bg-one-batt) * var(--ratioSizeWin)),
+    bottom left;
+
+  background-size:
+    calc(var(--bg-one-jump) * var(--ratioSizeWin)),
+    calc(var(--bg-one-black) * var(--ratioSizeWin)),
+    calc(var(--bg-one-batt) * var(--ratioSizeWin)),
+    calc(var(--bg-one-ellipse) * var(--ratioSizeWin));
+}
+
+.right-bg-one {
+  background: url(/SVG/Start.svg), url(/SVG/Jump_Red.svg), url(/SVG/Battary.svg), url(/IMG/juice-5gaHxsCxAZk-unsplash-2.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position:
+    left calc(var(--left-bg-two-start) * var(--ratioSizeWin)) top calc(var(--top-bg-two-start) * var(--ratioSizeWin)),
+    right calc(var(--right-bg-two-red) * var(--ratioSizeWin)) top calc(var(--top-bg-two-red) * var(--ratioSizeWin)),
+    right calc(var(--right-bg-two-batt) * var(--ratioSizeWin)) top calc(var(--top-bg-two-batt) * var(--ratioSizeWin)),
+    bottom left;
+
+  background-size:
+    calc(var(--bg-two-start) * var(--ratioSizeWin)),
+    calc(var(--bg-two-red) * var(--ratioSizeWin)),
+    calc(var(--bg-two-batt) * var(--ratioSizeWin)),
+    calc(var(--bg-two-photo) * var(--ratioSizeWin));
+}
+
+.intro-text {
+  position: relative;
+
+  width: calc(var(--intro-width) * var(--ratioSizeWin));
+  height: calc(var(--intro-height) * var(--ratioSizeWin));
+  left: calc(var(--intro-left) * var(--ratioSizeWin));
+  top: calc(var(--intro-top) * var(--ratioSizeWin));
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(var(--intro-font-size) * var(--ratioSizeWin));
+  line-height: calc(var(--intro-line-height) * var(--ratioSizeWin));
+  text-align: right;
+  text-indent: calc(var(--intro-text-indent) * var(--ratioSizeWin));
+
+  color: #474747;
+
+  text-shadow: calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) rgba(0, 0, 0, 0.2);
+}
+
+.intro-text p {
+  margin-block-start: calc(var(--intro-margin) * var(--ratioSizeWin));
+  margin-block-end: calc(var(--intro-margin) * var(--ratioSizeWin));
+}
