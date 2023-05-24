@@ -14,15 +14,15 @@
   --bg-black: 690.87px;
   --bg-battary: 701.8px;
   --bg-photo: 800px;
-  
+
   --intro-width: 480px;
   --intro-height: 394px;
   --intro-left: 129px;
   --intro-top: 121px;
   --intro-font-size: 22px;
   --intro-line-height: 26px;
-  --intro-text-shadow: 3px;  
-  --intro-margin: 8px; 
+  --intro-text-shadow: 3px;
+  --intro-margin: 8px;
 }
 
 .main-portrait {
@@ -39,10 +39,10 @@
 
 .portrait-backgrount {
   background:
-    url(/SVG/jump_red_p.svg),
-    url(/SVG/jump_black_p.svg),
-    url(/SVG/battary_p.svg),
-    url(/IMG/man_cable_p.jpg);
+    url(../svg/jump_red_p.svg),
+    url(../svg/jump_black_p.svg),
+    url(../svg/battary_p.svg),
+    url(../img/man_cable_p.jpg);
   background-repeat:
     no-repeat,
     no-repeat,
@@ -73,7 +73,7 @@
   font-weight: 500;
   font-size: calc(var(--intro-font-size) * var(--ratioSizeWin));
   line-height: calc(var(--intro-line-height) * var(--ratioSizeWin));
-  text-align: left;  
+  text-align: left;
 
   color: #FFFFFF;
 

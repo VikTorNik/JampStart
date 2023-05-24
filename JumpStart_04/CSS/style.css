@@ -6,3 +6,13 @@ body {
   background: rgb(157, 152, 123);
   cursor: pointer;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}

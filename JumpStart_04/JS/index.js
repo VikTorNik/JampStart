@@ -32,17 +32,36 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(parentDiv);
   };
 
+  // const resizeWindowApplication = () => {
+  //   let ratioWidth;
+  //   let ratioHeight;
+  //   if (window.innerWidth >= window.innerHeight) {
+  //     showintroTextLandscapeWindow();
+  //     ratioWidth = window.innerWidth / widthWindowApplication;
+  //     ratioHeight = window.innerHeight / heightWindowApplication;
+  //   } else {
+  //     showintroTextPortraitWindow();
+  //     ratioWidth = window.innerWidth / heightWindowApplication;
+  //     ratioHeight = window.innerHeight / widthWindowApplication;
+  //   }
+  //   if ((ratioWidth < 1) || (ratioHeight < 1)) {
+  //     ROOT.style.setProperty("--ratioSizeWin", Math.min(ratioWidth, ratioHeight));
+  //   } else {
+  //     ROOT.style.setProperty("--ratioSizeWin", normalRatio);
+  //   }
+  // }
+
   const resizeWindowApplication = () => {
     let ratioWidth;
     let ratioHeight;
     if (window.innerWidth >= window.innerHeight) {
       showintroTextLandscapeWindow();
-      ratioWidth = window.innerWidth / widthWindowApplication;
-      ratioHeight = window.innerHeight / heightWindowApplication;
+      ratioWidth = document.documentElement.clientWidth / widthWindowApplication;
+      ratioHeight = document.documentElement.clientHeight / heightWindowApplication;
     } else {
       showintroTextPortraitWindow();
-      ratioWidth = window.innerWidth / heightWindowApplication;
-      ratioHeight = window.innerHeight / widthWindowApplication;
+      ratioWidth = document.documentElement.clientWidth / heightWindowApplication;
+      ratioHeight = document.documentElement.clientHeight / widthWindowApplication;
     }
     if ((ratioWidth < 1) || (ratioHeight < 1)) {
       ROOT.style.setProperty("--ratioSizeWin", Math.min(ratioWidth, ratioHeight));
@@ -55,3 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('resize', (e) => resizeWindowApplication());
 
 });
+
+
+// const windowInnerWidth = document.documentElement.clientWidth
+// const windowInnerHeight = document.documentElement.clientHeight
+// const pageWidth = document.documentElement.scrollWidth
+// const pageHeight = document.documentElement.scrollHeight

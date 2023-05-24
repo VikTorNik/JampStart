@@ -53,10 +53,10 @@
 
 .left-bg-one {
   background:
-    url(/SVG/jump_l.svg),
-    url(/SVG/jump_black_l.svg),
-    url(/SVG/battary_l.svg),
-    url(/SVG/ellipse_l.svg) rgba(217, 217, 217, 0.21);
+    url(../svg/jump_l.svg),
+    url(../svg/jump_black_l.svg),
+    url(../svg/battary_l.svg),
+    url(../svg/ellipse_l.svg) rgba(217, 217, 217, 0.21);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
     left calc(var(--left-bg-one-jump) * var(--ratioSizeWin)) top calc(var(--top-bg-one-jump) * var(--ratioSizeWin)),
@@ -72,10 +72,10 @@
 
 .right-bg-one {
   background:
-    url(/SVG/start_l.svg),
-    url(/SVG/jump_red_l.svg),
-    url(/SVG/battary_l.svg),
-    url(/IMG/man_cable_l.jpg);
+    url(../svg/start_l.svg),
+    url(../svg/jump_red_l.svg),
+    url(../svg/battary_l.svg),
+    url(../img/man_cable_l.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
     left calc(var(--left-bg-two-start) * var(--ratioSizeWin)) top calc(var(--top-bg-two-start) * var(--ratioSizeWin)),
