@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
-
 :root {
-  --ratioSizeWin: 1;  
+  --ratioSizeWin: 1;
   --widthStandart: 1440px;
   --heightStandart: 800px;
 
@@ -40,34 +38,31 @@
   --intro-margin: 12.5px;
 }
 
-body {
+.main-landscape {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
-  background: rgb(76, 75, 68);
-}
-
-.backgrount-layout-one {
   width: calc(var(--widthStandart) * var(--ratioSizeWin));
   height: calc(var(--heightStandart) * var(--ratioSizeWin));
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: rgba(185, 179, 146, 1);
 }
 
 .left-bg-one {
-  background: url(/SVG/Jump.svg), url(/SVG/Jump_Black.svg), url(/SVG/Battary.svg), url(/SVG/Ellipse.svg) rgba(217, 217, 217, 0.21);
+  background:
+    url(/SVG/jump_l.svg),
+    url(/SVG/jump_black_l.svg),
+    url(/SVG/battary_l.svg),
+    url(/SVG/ellipse_l.svg) rgba(217, 217, 217, 0.21);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
     left calc(var(--left-bg-one-jump) * var(--ratioSizeWin)) top calc(var(--top-bg-one-jump) * var(--ratioSizeWin)),
     left calc(var(--left-bg-one-black) * var(--ratioSizeWin)) top calc(var(--top-bg-one-black) * var(--ratioSizeWin)),
     left calc(var(--left-bg-one-batt) * var(--ratioSizeWin)) top calc(var(--top-bg-one-batt) * var(--ratioSizeWin)),
     bottom left;
-
   background-size:
     calc(var(--bg-one-jump) * var(--ratioSizeWin)),
     calc(var(--bg-one-black) * var(--ratioSizeWin)),
@@ -76,14 +71,17 @@ body {
 }
 
 .right-bg-one {
-  background: url(/SVG/Start.svg), url(/SVG/Jump_Red.svg), url(/SVG/Battary.svg), url(/IMG/juice-5gaHxsCxAZk-unsplash-2.jpg);
+  background:
+    url(/SVG/start_l.svg),
+    url(/SVG/jump_red_l.svg),
+    url(/SVG/battary_l.svg),
+    url(/IMG/man_cable_l.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
     left calc(var(--left-bg-two-start) * var(--ratioSizeWin)) top calc(var(--top-bg-two-start) * var(--ratioSizeWin)),
     right calc(var(--right-bg-two-red) * var(--ratioSizeWin)) top calc(var(--top-bg-two-red) * var(--ratioSizeWin)),
     right calc(var(--right-bg-two-batt) * var(--ratioSizeWin)) top calc(var(--top-bg-two-batt) * var(--ratioSizeWin)),
     bottom left;
-
   background-size:
     calc(var(--bg-two-start) * var(--ratioSizeWin)),
     calc(var(--bg-two-red) * var(--ratioSizeWin)),
@@ -91,7 +89,7 @@ body {
     calc(var(--bg-two-photo) * var(--ratioSizeWin));
 }
 
-.intro-text {
+.intro-text-landscape {
   position: relative;
 
   width: calc(var(--intro-width) * var(--ratioSizeWin));
@@ -112,7 +110,7 @@ body {
   text-shadow: calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) rgba(0, 0, 0, 0.2);
 }
 
-.intro-text p {
+.intro-text-landscape p {
   margin-block-start: calc(var(--intro-margin) * var(--ratioSizeWin));
   margin-block-end: calc(var(--intro-margin) * var(--ratioSizeWin));
 }

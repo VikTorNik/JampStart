@@ -1,3 +1,8 @@
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const ROOT = document.documentElement;
   const widthWindowApplication = 1440;

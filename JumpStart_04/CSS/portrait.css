@@ -1,0 +1,86 @@
+:root {
+  --ratioSizeWin: 1;
+  --widthStandart: 800px;
+  --heightStandart: 1440px;
+
+  --left-red: 0px;
+  --top-red: 38px;
+  --left-black: 111px;
+  --top-black: 35px;
+  --left-battary: 50.5px;
+  --top-battary: 27px;
+
+  --bg-red: 704px;
+  --bg-black: 690.87px;
+  --bg-battary: 701.8px;
+  --bg-photo: 800px;
+  
+  --intro-width: 480px;
+  --intro-height: 394px;
+  --intro-left: 129px;
+  --intro-top: 121px;
+  --intro-font-size: 22px;
+  --intro-line-height: 26px;
+  --intro-text-shadow: 3px;  
+  --intro-margin: 8px; 
+}
+
+.main-portrait {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--widthStandart) * var(--ratioSizeWin));
+  height: calc(var(--heightStandart) * var(--ratioSizeWin));
+  display: grid;
+}
+
+.portrait-backgrount {
+  background:
+    url(/SVG/jump_red_p.svg),
+    url(/SVG/jump_black_p.svg),
+    url(/SVG/battary_p.svg),
+    url(/IMG/man_cable_p.jpg);
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  background-position:
+    left calc(var(--left-red) * var(--ratioSizeWin)) top calc(var(--top-red) * var(--ratioSizeWin)),
+    left calc(var(--left-black) * var(--ratioSizeWin)) top calc(var(--top-black) * var(--ratioSizeWin)),
+    left calc(var(--left-battary) * var(--ratioSizeWin)) top calc(var(--top-battary) * var(--ratioSizeWin)),
+    bottom left;
+  background-size:
+    calc(var(--bg-red) * var(--ratioSizeWin)),
+    calc(var(--bg-black) * var(--ratioSizeWin)),
+    calc(var(--bg-battary) * var(--ratioSizeWin)),
+    calc(var(--bg-photo) * var(--ratioSizeWin));
+}
+
+.intro-text-portrait {
+  position: relative;
+
+  width: calc(var(--intro-width) * var(--ratioSizeWin));
+  height: calc(var(--intro-height) * var(--ratioSizeWin));
+  left: calc(var(--intro-left) * var(--ratioSizeWin));
+  top: calc(var(--intro-top) * var(--ratioSizeWin));
+
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(var(--intro-font-size) * var(--ratioSizeWin));
+  line-height: calc(var(--intro-line-height) * var(--ratioSizeWin));
+  text-align: left;  
+
+  color: #FFFFFF;
+
+  text-shadow: calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) calc(var(--intro-text-shadow) * var(--ratioSizeWin)) rgba(0, 0, 0, 0.4);
+}
+
+.intro-text-portrait p {
+  margin-block-start: calc(var(--intro-margin) * var(--ratioSizeWin));
+  margin-block-end: calc(var(--intro-margin) * var(--ratioSizeWin));
+}
