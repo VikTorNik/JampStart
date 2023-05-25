@@ -30,38 +30,21 @@ document.addEventListener("DOMContentLoaded", () => {
     introTextHTML.push("</div></div>");
     parentDiv.innerHTML = introTextHTML.join("");
     document.body.appendChild(parentDiv);
-  };
-
-  // const resizeWindowApplication = () => {
-  //   let ratioWidth;
-  //   let ratioHeight;
-  //   if (window.innerWidth >= window.innerHeight) {
-  //     showintroTextLandscapeWindow();
-  //     ratioWidth = window.innerWidth / widthWindowApplication;
-  //     ratioHeight = window.innerHeight / heightWindowApplication;
-  //   } else {
-  //     showintroTextPortraitWindow();
-  //     ratioWidth = window.innerWidth / heightWindowApplication;
-  //     ratioHeight = window.innerHeight / widthWindowApplication;
-  //   }
-  //   if ((ratioWidth < 1) || (ratioHeight < 1)) {
-  //     ROOT.style.setProperty("--ratioSizeWin", Math.min(ratioWidth, ratioHeight));
-  //   } else {
-  //     ROOT.style.setProperty("--ratioSizeWin", normalRatio);
-  //   }
-  // }
+  };  
 
   const resizeWindowApplication = () => {
     let ratioWidth;
-    let ratioHeight;
-    if (window.innerWidth >= window.innerHeight) {
+    let ratioHeight; 
+    const clientWidth = document.documentElement.clientWidth;
+    const clientHeight = document.documentElement.clientHeight;
+    if (clientWidth >= clientHeight) {
       showintroTextLandscapeWindow();
-      ratioWidth = document.documentElement.clientWidth / widthWindowApplication;
-      ratioHeight = document.documentElement.clientHeight / heightWindowApplication;
+      ratioWidth = clientWidth / widthWindowApplication;
+      ratioHeight = clientHeight / heightWindowApplication;
     } else {
       showintroTextPortraitWindow();
-      ratioWidth = document.documentElement.clientWidth / heightWindowApplication;
-      ratioHeight = document.documentElement.clientHeight / widthWindowApplication;
+      ratioWidth = clientWidth / heightWindowApplication;
+      ratioHeight = clientHeight / widthWindowApplication;
     }
     if ((ratioWidth < 1) || (ratioHeight < 1)) {
       ROOT.style.setProperty("--ratioSizeWin", Math.min(ratioWidth, ratioHeight));
@@ -70,13 +53,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // const resizeWindowApplication = () => {
+  //   let ratioWidth;
+  //   let ratioHeight;
+  //   if (window.innerWidth >= window.innerHeight) {
+  //     showintroTextLandscapeWindow();
+  //     ratioWidth = document.documentElement.clientWidth / widthWindowApplication;
+  //     ratioHeight = document.documentElement.clientHeight / heightWindowApplication;
+  //   } else {
+  //     showintroTextPortraitWindow();
+  //     ratioWidth = document.documentElement.clientWidth / heightWindowApplication;
+  //     ratioHeight = document.documentElement.clientHeight / widthWindowApplication;
+  //   }
+  //   if ((ratioWidth < 1) || (ratioHeight < 1)) {
+  //     ROOT.style.setProperty("--ratioSizeWin", Math.min(ratioWidth, ratioHeight));
+  //   } else {
+  //     ROOT.style.setProperty("--ratioSizeWin", normalRatio);
+  //   }
+  // }
+
   resizeWindowApplication();
   window.addEventListener('resize', (e) => resizeWindowApplication());
 
 });
-
-
-// const windowInnerWidth = document.documentElement.clientWidth
-// const windowInnerHeight = document.documentElement.clientHeight
-// const pageWidth = document.documentElement.scrollWidth
-// const pageHeight = document.documentElement.scrollHeight
